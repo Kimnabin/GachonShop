@@ -1,0 +1,20 @@
+<div class="background">
+  <div class="container">
+    <div class="panel pricing-table">
+      
+      <% for (var i = 0; i < itemLists.length; i++) { %>
+        <div class="pricing-plan">
+            <img src="<%= itemLists[i].image %>" alt="" class="pricing-img">
+            <h2 class="pricing-header"><%= itemLists[i].name %></h2>
+            <ul class="pricing-features">
+            <li class="pricing-features-item">수랑: <%= itemLists[i].stock %></li>
+            <li class="pricing-features-item"><%= itemLists[i].brand %></li>
+            </ul>
+            <span class="pricing-price"><%= itemLists[i].price %>won</span>
+            <a href="#/" class="pricing-button">구입하기</a>
+        </div>
+      <% } %>
+      
+    </div>
+  </div>
+</div>

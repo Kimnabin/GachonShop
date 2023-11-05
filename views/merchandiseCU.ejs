@@ -1,0 +1,52 @@
+<div class="container">	
+    <script>
+
+        function displayFileName(){
+            var fileName = $("#file").val();
+            $(".upload-name").val(fileName);
+        }
+    </script>
+    <h2>코드 입력</h2>
+	<form action="/merchandise/create_process" method="post" enctype="multipart/form-data">
+		<div class="mb-3">
+			<label class="form-label" for="id">카테고리</label> 
+            <select name = "category" id = "id">
+                <option value=""></option>
+            </select>
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">제품명</label> 
+			<input class="form-control" type="text" name="name" style = "width:300px;" />
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">가격</label> 
+			<input class="form-control" type="text" name="price" style="width:300px;" />
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">재고</label> 
+			<input class="form-control" type="text" name="stock" style="width:300px;" />
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">브랜드</label> 
+			<input class="form-control" type="text" name="brand" style="width:300px;" />
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">공급자</label> 
+			<input class="form-control" type="text" name="supplier" style="width:300px;" />
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">할인여부</label> 
+			<input class="form-control" type="text" name="sale_yn" style="width:300px;" />
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">할인가격</label> 
+			<input class="form-control" type="text" name="sale_price" style="width:300px;" />
+		</div>
+
+        <div class="mb-3">
+            <input class="upload-name" value="" name = "image" placeholder="이미지파일">
+            <input type="file" id="file" name="uploadFile" onchange="displayFileName()">
+        </div>
+        <button class="btn btn-outline-primary btn-sm" type="submit">입력</button>
+  </form>
+</div>
