@@ -154,4 +154,29 @@ ul {
 .empty_item_err {
   border: solid 1px black;
   padding: 10px;
+  border-radius: 15px;
+  margin: 20px;
 }
+
+.img-size {
+  width: 254px;
+  height: 254px;
+  margin-bottom: 10px;
+}
+
+.pricing-button-delete {
+  border: 1px solid #9dd1ff;
+  border-radius: 10px;
+  color: #fe3471;
+  display: inline-block;
+  margin: 25px 0;
+  padding: 15px 35px;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+.pricing-button-delete:hover,
+.pricing-button-delete:focus {
+  background-color: rgb(233, 10, 84);
+  color: rgb(2, 2, 2);
+} 

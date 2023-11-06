@@ -1,9 +1,22 @@
-<table class="table table-bordered ">
+<div class="background">
+  <div class="container">
+    <div class="panel pricing-table">
+      
+      <% for (var i = 0; i < itemLists.length; i++) { %>
+        <div class="pricing-plan">
+            <img class="img-size" src="<%= itemLists[i].image %>" alt="" class="pricing-img">
+            <h2 class="pricing-header"><%= itemLists[i].name %></h2>
+            <ul class="pricing-features">
+            <li class="pricing-features-item">수랑: <%= itemLists[i].stock %></li>
+            <li class="pricing-features-item"><%= itemLists[i].brand %></li>
+            </ul>
+            <span class="pricing-price"><%= itemLists[i].price %>won</span>
+            <a href="/merchandise/update/<%= itemLists[i].mer_id %>" class="pricing-button">Update</a>
+            <a href="/merchandise/delete/<%= itemLists[i].mer_id %>" class="pricing-button-delete" onclick="if(confirm('정말로 <%= itemLists[i].name %> 삭제하시겠습니까?') == false){return false}">Delete</a>
 
-    <tr><td><img src="" style="width:100px;height:100px; "></td>
-        <td>상품이름</td>
-        <td>가격 </td>
-        <td>브랜드</td> 
-    </tr>
-
-</table>
+        </div>
+      <% } %>
+      
+    </div>
+  </div>
+</div>
