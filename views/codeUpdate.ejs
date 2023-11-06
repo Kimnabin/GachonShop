@@ -1,0 +1,30 @@
+<div class="container">	
+    <h2>코드 수정</h2>
+	<form action="/code/update_process" method="post" >
+		<div class="mb-3">
+			
+			<input type="hidden" class="form-control" value="<%= itemLists[0].main_id %>" type="text" name="main_id" placeholder="대분류 입력" style = "width:300px;" />
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">대분류명</label> 
+			<input class="form-control" value="<%= itemLists[0].main_name %>" type="text" name="main_name" placeholder="대분류명 입력" style = "width:300px;" />
+		</div>
+        <div class="mb-3">
+			
+			<input type="hidden" class="form-control" value="<%= itemLists[0].sub_id %>" type="text" name="sub_id" placeholder="소분류 입력" style="width:300px;" />
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">소분류명</label> 
+			<input class="form-control" value="<%= itemLists[0].sub_name %>" type="text" name="sub_name" placeholder="소분류명 입력" style="width:300px;" />
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">시작일</label> 
+			<input class="form-control" value="<%= itemLists[0].start %>" type="text" name="start" placeholder="startTime" id="start" style="width:300px;" />
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">종료일</label> 
+			<input class="form-control" value="<%= itemLists[0].end %>" type="text" name="end" placeholder="endTime" id="end" style="width:300px;" />
+		</div>
+        <button class="btn btn-outline-primary btn-sm" type="submit">입력</button>
+  </form>
+</div>

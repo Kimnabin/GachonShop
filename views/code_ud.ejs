@@ -27,6 +27,8 @@ tr:hover {background-color: rgb(189, 169, 162);}
         <td>소분류명</td>
         <td>시작일</td>
         <td>종료일</td>
+        <td></td>
+        <td></td>
        
     </thead> 
     <% for (var i = 0; i < code_Lists.length; i++) { %>
@@ -38,7 +40,8 @@ tr:hover {background-color: rgb(189, 169, 162);}
                 <td><%=code_Lists[i].sub_name %></td>
                 <td><%=code_Lists[i].start %></td>
                 <td><%=code_Lists[i].end %></td>
-
+                <td class="code-button-size"><a href="/code/update/<%=code_Lists[i].main_id %>/<%=code_Lists[i].sub_id %>" class="pricing-button-codeUD">update</a></td>
+                <td class="code-button-size"><a href="/code/delete/<%=code_Lists[i].main_id %>/<%=code_Lists[i].sub_id %>" class="pricing-button-delete-codoUD" onclick="if(confirm('정말로 <%=code_Lists[i].main_name %> --- <%=code_Lists[i].sub_id %> 삭제하시겠습니까?') == false){return false}">delete</a></td>
             </tr>
     <% } %>
 </table>

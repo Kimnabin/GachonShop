@@ -136,6 +136,42 @@
   transition: all 150ms ease-in-out;
 }
 
+/* code-router-css  */
+.pricing-button-codeUD {
+  border: 1px solid #9dd1ff;
+  border-radius: 10px;
+  color: #0063dd;
+  display: inline-block;
+  padding: 3px 11px;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+.pricing-button-codeUD:hover {
+  cursor: pointer;
+  background-color: #9dd1ff;
+  color: rgb(7, 7, 7);
+}
+
+.pricing-button-delete-codoUD {
+  border: 1px solid #9dd1ff;
+  border-radius: 10px;
+  color: #fe3471;
+  display: inline-block;
+  padding: 3px 11px;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+.pricing-button-delete-codoUD:hover {
+  background-color: rgb(202, 13, 29);
+  border: 1px solid rgb(202, 13, 29);
+  cursor: pointer;
+  color: white;
+}
+.code-button-size{
+  padding: 0px;
+}
+/* code-router-css-end */
+
 .pricing-button:hover,
 .pricing-button:focus {
   background-color: #e1f1ff;

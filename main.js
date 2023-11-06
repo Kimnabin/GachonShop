@@ -10,6 +10,7 @@ app.use(express.static(path.join(__dirname, "public")));
 var rootRouter = require("./router/rootRouter");
 var authRouter = require("./router/authRouter");
 var merchandiseRouter = require("./router/merchandiseRouter");
+var codeRouter = require("./router/codeRouter");
 // 세션 모듈, 세션 DB 저장 모듈
 var session = require("express-session");
 var MySQLStore = require("express-mysql-session")(session);
@@ -38,7 +39,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/auth", authRouter);
 app.use("/", rootRouter);
 app.use("/merchandise", merchandiseRouter);
-
+app.use("/code", codeRouter);
 app.listen(3000, () => {
   console.log("Example app listening on port 3000!");
 });
