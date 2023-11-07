@@ -1,0 +1,56 @@
+<div class="person-add">
+<div class="wrapper">
+
+<div class="heading">
+<h2>사용자 수정</h2>
+<p>개인 정보를 확인해주세요!</p>
+</div>
+
+<form action="/person/update_process" method="post">
+<div class="input-group">
+ <input type="hidden" id="username" value="<%=personLists[0].loginid %>" name="useName" class="input-field" placeholder="Username" >
+</div>
+
+<div class="input-group">
+ <input type="password" id="password" value="<%=personLists[0].password %>"  name="pwd" class="input-field" placeholder="Password" >
+</div>
+  
+  <div class="input-group">
+ <input type="text" id="text" value="<%=personLists[0].name %>"  name="name" class="input-field" placeholder="Name" >
+</div>
+  
+  <div class="input-group">
+ <input type="text" id="address" value="<%=personLists[0].address %>"  name="address" class="input-field" placeholder="Address" >
+</div>
+  
+  <div class="input-group">
+ <input type="text" id="tel" value="<%=personLists[0].tel %>"  name="tel" class="input-field" placeholder="Tel number" >
+</div>
+  
+  <div class="input-group">
+ <input type="text" id="birth" value="<%=personLists[0].birth %>"  name="birth" class="input-field" placeholder="Birth" >
+</div>
+
+    <div class="input-group">
+ <input type="text" id="point" value="<%=personLists[0].class %>"  name="class" class="input-field" placeholder="Class" >
+</div>
+
+  <div class="input-group">
+ <input type="number" id="point" value="<%=personLists[0].point %>"  name="point" class="input-field" placeholder="Point" >
+</div>
+
+<button type="submit">완료</0></0></button>
+
+</form>
+
+<div class="input-group row">
+ <!-- <div class="row">
+    <a href="#" target="_blank">Forgot password?</a> 
+ </div> -->
+</div>
+  
+<footer>
+    Leaning NodeJS ❤️ with <a href="https://www.facebook.com/profile.php?id=100010043976419" target="_black">CongDuc</a>
+</footer>
+
+</div>

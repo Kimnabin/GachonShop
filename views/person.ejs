@@ -1,0 +1,44 @@
+<style>
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20px;
+    font-size: larger;
+}
+thead {
+    font-weight: 600;
+    color: brown;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: rgb(189, 169, 162);}
+</style>
+<table >
+    <thead> 
+        <td>Login ID</td>
+        <td>Name</td>
+        <td>Address</td>
+        <td>Tel</td>
+        <td>Birth</td>
+        <td>Point</td>
+       
+    </thead> 
+    <% for (var i = 0; i < personLists.length; i++) { %>
+            <tr>
+                
+                <td><%=personLists[i].loginid %></td>
+                <td><%=personLists[i].name %></td>
+                <td><%=personLists[i].address %></td>
+                <td><%=personLists[i].tel %></td>
+                <td><%=personLists[i].birth %></td>
+                <td><%=personLists[i].point %></td>
+
+            </tr>
+    <% } %>
+</table>

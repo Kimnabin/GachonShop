@@ -1,0 +1,57 @@
+<div class="body-login-logout">
+
+<div class="container-login-logout" id="container-login-logout">
+	<div class="form-container sign-up-container">
+		<form action="#" method="post">
+			<h1 class="h1-login-logout">Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="/auth/login_process" method="post">
+			<h1 class="h1-login-logout">Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="text" placeholder="ID" name="id" id="id" required oninvalid="this.setCustomValidity('아이디 입력해주세요!')"/>
+			<input type="password" placeholder="Password" name="pwd" id="pwd" required oninvalid="this.setCustomValidity('패스워드 입력해주세요!')"/>
+			<a href="#">Forgot your password?</a>
+			<button type="submit">Sign In</button>
+		</form>	
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1 class="h1-login-logout">Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1 class="h1-login-logout">Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>
+		Created with <i class="fa fa-heart"></i> by
+		<a target="_blank" href="https://www.facebook.com/profile.php?id=100010043976419">CongDuc</a>
+	</p>
+</footer>
+
+</div>
