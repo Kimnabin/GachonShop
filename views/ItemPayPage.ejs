@@ -1,0 +1,24 @@
+<div class="background">
+  <div class="container">
+    <div class="panel pricing-table">
+      
+      <!-- <% for (var i = 0; i < itemLists.length; i++) { %> -->
+        <div class="pricing-plan">
+
+            <a href="/purchase/detail/<%= itemLists[0].mer_id %>"><img class="img-size" src="<%= itemLists[0].image %>" alt="" class="pricing-img"></a>
+
+            <h2 class="pricing-header"><%= itemLists[0].name %></h2>
+            <ul class="pricing-features">
+            <li class="pricing-features-item"><%= itemLists[0].brand %></li>
+            <li class="pricing-features-item"><form action=""><span style="margin-right: 10px;">수량:</span><input type="number" name="" id="" min="0"></form></li>
+            </ul>
+            <span class="pricing-price"><%= itemLists[0].price %>won</span>
+            <a href="/purchase" class="pricing-button">결제하기</a>
+            <a href="#/" class="pricing-button">장바구이</a>
+
+        </div>
+      <!-- <% } %> -->
+      
+    </div>
+  </div>
+</div>
