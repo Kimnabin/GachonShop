@@ -7,4 +7,8 @@ router.get("/", (req, res) => {
   shop.home(req, res);
 });
 
+router.get("/shop/:category", (req, res) => {
+  shop.home(req, res);
+});
+
 module.exports = router;

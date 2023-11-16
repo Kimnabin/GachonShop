@@ -1,0 +1,39 @@
+<style>
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20px;
+    font-size: larger;
+}
+thead {
+    font-weight: 600;
+    color: brown;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: rgb(189, 169, 162);}
+</style>
+<table >
+    <thead> 
+        <td>작성자</td>
+        <td>제목</td>
+        <td>날짜</td>
+    </thead> 
+    <% for (var i = 0; i < board.length; i++) { %>
+            <tr>
+                
+                <td><%=board[i].loginid %></td>
+                <td><a href="/board/detail/<%= board[i].board_id %>/<%= board[i].p_id %>"><%=board[i].title %></a></td>
+                <td><%=board[i].date %></td>     
+                
+            </tr>
+    <% } %>
+</table>
+
+<%-btn%>

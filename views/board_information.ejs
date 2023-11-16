@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="mb-3">
+			<label class="form-label" for="id">제목</label> 
+			<input class="form-control" type="text" value="<%= board[0].title %>"  style = "width:300px;" disabled/>
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">작성자</label> 
+			<input class="form-control" type="text"  value = "<%= board[0].loginid %>" style = "width:300px;" disabled/>
+
+		</div>
+		<div class="mb-3">
+			<label class="form-label" for="id">작성일</label> 
+			<input class="form-control" type="text"  value = "<%= board[0].date %>" style = "width:300px;" disabled/>
+
+		</div>
+        <div class="mb-3">
+			<label class="form-label" for="id">내용</label> 
+			<textarea class="form-control"  style = "width:800px;height: 200px;" disabled><%= board[0].content %></textarea>
+		</div>
+		<a href="/board/view/1/1" class="btn btn-outline-primary btn-sm">목록</a>
+		<%-btn_up %>
+		<%-btn_de %>
+</div>

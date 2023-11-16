@@ -1,0 +1,46 @@
+<style>
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20px;
+    font-size: larger;
+}
+thead {
+    font-weight: 600;
+    color: brown;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: rgb(189, 169, 162);}
+</style>
+<table >
+    <thead> 
+        <td>제목</td>
+        <td>페이지당 글 수</td>
+        <td>설명</td>
+        <td>일반 상용자 쓰기 가능 여부</td>
+        <td>댓글 가능 여부</td>
+        <td></td>
+        <td></td>
+       
+    </thead> 
+    <% for (var i = 0; i < boardtypeList.length; i++) { %>
+            <tr>
+                
+                <td><%= boardtypeList[i].title %></td>
+                <td><%= boardtypeList[i].numPerPage %></td>
+                <td><%= boardtypeList[i].description %></td>
+                <td><%= boardtypeList[i].write_YN %></td>
+                <td><%= boardtypeList[i].re_YN %></td>
+                <td class="code-button-size"><a href="/board/type/update/<%= boardtypeList[i].type_id %>" class="pricing-button-codeUD">update</a></td>
+                <td class="code-button-size"><a href="/board/type/delete/<%= boardtypeList[i].type_id %>" class="pricing-button-delete-codoUD" onclick="if(confirm('정말로 <%=boardtypeList[i].title %> 삭제하시겠습니까?') == false){return false}">delete</a></td>
+
+            </tr>
+    <% } %>
+</table>

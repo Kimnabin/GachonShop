@@ -249,3 +249,8 @@
     color: #3c97bf;
     text-decoration: none;
 }
+
+.btn-by-me {
+	margin-left: 80% !important;
+    margin-top: 2%;
+}

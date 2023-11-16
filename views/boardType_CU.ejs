@@ -1,0 +1,126 @@
+
+	
+    <% if(cu==='C'){ %>
+            <div class="person-add">
+                <div class="wrapper">
+
+                <div class="heading">
+                    <h2>게시판 생성 </h2>
+
+            </div>
+
+            <form action="/board/type/create_process" method="post">
+                <div class="input-group">
+                <input type="text" id="username" name="title" class="input-field" placeholder="제목" >
+                </div>
+
+                <div class="input-group">
+                <input type="text" id="password" name="description" class="input-field" placeholder="설명" >
+                </div>
+            
+                <div class="input-group">
+                <input type="text" id="text" name="numPerPage" class="input-field" placeholder="페이지당 보여지는 글 수" >
+                </div>
+
+                        <label class="form-label" >일반 사용자 쓰기 가능 여부 </label>
+                        <div class="mb-3">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="write_YN" id="write_YN1" value="Y">
+                                <label class="form-check-label" for="write_YN1"> Yes </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="write_YN" id="write_YN2" value="N" checked>
+                                <label class="form-check-label" for="write_YN2"> No </label>
+                            </div>
+                        </div>
+
+                        <label class="form-label" for="id">댓글 가능 여부</label> 
+                        <div class="mb-3">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="re_YN" id="re_YN1" value="Y">
+                                <label class="form-check-label" for="re_YN1"> Yes </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="re_YN" id="re_YN2" value="N" checked>
+                                <label class="form-check-label" for="re_YN2"> No </label>
+                            </div>
+                        </div>
+                
+
+
+                <button type="submit">생성</button>
+
+            </form>
+
+            
+            <footer>
+                Leaning NodeJS ❤️ with <a href="https://www.facebook.com/profile.php?id=100010043976419" target="_black">CongDuc</a>
+            </footer>
+
+            </div>
+    <% } else if(cu==='U') { %>
+
+            <div class="person-add">
+                <div class="wrapper">
+
+                <div class="heading">
+                    <h2>게시판 수정</h2>
+
+            </div>
+
+                <form action="/board/type/update_process" method="post" >
+                    <input type="hidden"  name="type_id" value = "<%=boardtype[0].type_id%>" />
+
+                    <div class="input-group">
+                        <input type="text" name="title" value = "<%-boardtype[0].title%>" class="input-field" placeholder="제목" >
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" name="description" value = "<%=boardtype[0].description%>" class="input-field" placeholder="설명" >
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" name="numPerPage" class="input-field" value = "<%=boardtype[0].numPerPage%>" placeholder="페이지당 보여지는 글 수" >
+                    </div>
+                    
+                    <%  var checkedY = '';
+                        var checkedN = '';
+                        if(boardtype[0].write_YN === 'Y') {checkedY = 'checked'}
+                        else {checkedN = 'checked'} %>
+                    
+                    <label class="form-label" >일반 사용자 쓰기 가능 여부 </label>
+                    <div class="mb-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="write_YN" id="write_YN1" value="Y" <%=checkedY%>>
+                            <label class="form-check-label" for="write_YN1"> Yes </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="write_YN" id="write_YN2" value="N" <%=checkedN%>>
+                            <label class="form-check-label" for="write_YN2"> No </label>
+                        </div>
+                    </div>
+
+                    <%  var checkedY = '';
+                    var checkedN = '';
+                    if(boardtype[0].re_YN === 'Y') {checkedY = 'checked'}
+                    else {checkedN = 'checked'} %>
+
+                    <label class="form-label" for="id">댓글 가능 여부</label> 
+                    <div class="mb-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="re_YN" id="re_YN1" value="Y" <%=checkedY%>>
+                            <label class="form-check-label" for="re_YN1"> Yes </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="re_YN" id="re_YN2" value="N" <%=checkedN%>>
+                            <label class="form-check-label" for="re_YN2"> No </label>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-primary btn-sm" type="submit">수정</button>
+                    <% } %>
+                </form>
+
+                <footer>
+                    Leaning NodeJS ❤️ with <a href="https://www.facebook.com/profile.php?id=100010043976419" target="_black">CongDuc</a>
+                </footer>
+

@@ -1,0 +1,103 @@
+
+<% if(ops === 'M'){ %>
+            <div class="person-add">
+                <div class="wrapper">
+
+                <div class="heading">
+                    <h2>공지사화 생성</h2>
+
+            </div>
+
+            <form action="/board/create_process" method="post">
+
+                <div class="input-group">
+                <input type="number"  name="type_id" class="input-field" placeholder="type-id" >
+                </div>
+
+                <div class="input-group">
+                <input type="number"  name="p_id" class="input-field" placeholder="p_id" >
+                </div>
+
+                <div class="input-group">
+                <input type="text"  name="loginid" class="input-field" placeholder="loginid" >
+                </div>
+
+                <div class="input-group">
+                <input type="password"  name="password" class="input-field" placeholder="password" >
+                </div>
+            
+                <div class="input-group">
+                <input type="text" name="title" class="input-field" placeholder="title" >
+                </div>
+
+                <div class="input-group">
+                <input type="text" name="date" class="input-field" placeholder="date" >
+                </div>
+
+                <div class="input-group">
+                <textarea name="content" id="" cols="50" rows="30" class="input-field" placeholder="내용" ></textarea>
+                </div>
+                
+
+
+                <button type="submit">생성</button>
+
+            </form>
+
+            
+            <footer>
+                Leaning NodeJS ❤️ with <a href="https://www.facebook.com/profile.php?id=100010043976419" target="_black">CongDuc</a>
+            </footer>
+
+<% } else if(ops === 'N') { %>
+
+            <div class="person-add">
+                <div class="wrapper">
+
+                <div class="heading">
+                    <h2>공지사화 생성</h2>
+
+            </div>
+
+            <form action="/board/create_process" method="post">
+
+                <div class="input-group">
+                <input type="number"  name="type_id" class="input-field" placeholder="type-id" >
+                </div>
+
+                <div class="input-group">
+                <input type="number"  name="p_id" class="input-field" placeholder="p_id" >
+                </div>
+
+                <div class="input-group">
+                <input type="text"  name="loginid" class="input-field" placeholder="loginid" >
+                </div>
+
+                <div class="input-group">
+                <input type="password"  name="password" class="input-field" placeholder="password" >
+                </div>
+            
+                <div class="input-group">
+                <input type="text" name="title" class="input-field" placeholder="title" >
+                </div>
+
+                <div class="input-group">
+                <input type="text" name="date" class="input-field" placeholder="date" >
+                </div>
+
+                <div class="input-group">
+                <textarea name="content" id="" cols="50" rows="30" class="input-field" placeholder="내용" ></textarea>
+                </div>
+                
+
+
+                <button type="submit">생성</button>
+
+            </form>
+
+            
+            <footer>
+                Leaning NodeJS ❤️ with <a href="https://www.facebook.com/profile.php?id=100010043976419" target="_black">CongDuc</a>
+            </footer>
+
+<% } %>
