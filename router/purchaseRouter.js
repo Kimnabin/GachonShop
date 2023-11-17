@@ -7,7 +7,7 @@ router.get("/detail/:mer_id", (req, res) => {
   purchase.itemPayView(req, res);
 });
 
-router.get("/", (req, res) => {
-  purchase.payMoney(req, res);
+router.post("/pay", (req, res) => {
+  purchase.purchase(req, res);
 });
 module.exports = router;

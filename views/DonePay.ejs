@@ -1,0 +1,46 @@
+<style>
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20px;
+    font-size: larger;
+}
+thead {
+    font-weight: 600;
+    color: brown;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: rgb(189, 169, 162);}
+</style>
+<table >
+    <thead> 
+        <td>상품</td>
+        <td>상품명</td>
+        <td>단가</td>
+        <td>구매량</td>
+        <td>총금액</td>
+        <td>구매일</td>
+        <td>취소여부</td>
+
+       
+    </thead> 
+    <% for (var i = 0; i < Items.length; i++) { %>
+            <tr>
+                
+                <td><%=Items[i].main_id %></td>
+                <td><%=Items[i].main_name %></td>
+                <td><%=Items[i].sub_id %></td>
+                <td><%=Items[i].sub_name %></td>
+                <td><%=Items[i].start %></td>
+                <td><%=Items[i].end %></td>
+
+            </tr>
+    <% } %>
+</table>
