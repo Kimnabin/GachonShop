@@ -13,11 +13,14 @@ thead {
 
 th, td {
   padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+  text-align: center;
+  border-bottom: 1px solid #000000;
 }
-
+tbody, td, tfoot, th, thead, tr {
+    border-width: 1px;
+}
 tr:hover {background-color: rgb(189, 169, 162);}
+
 </style>
 <table >
     <thead> 
@@ -31,16 +34,43 @@ tr:hover {background-color: rgb(189, 169, 162);}
 
        
     </thead> 
+    <tbody>
     <% for (var i = 0; i < Items.length; i++) { %>
             <tr>
-                
-                <td><%=Items[i].main_id %></td>
-                <td><%=Items[i].main_name %></td>
-                <td><%=Items[i].sub_id %></td>
-                <td><%=Items[i].sub_name %></td>
-                <td><%=Items[i].start %></td>
-                <td><%=Items[i].end %></td>
+                <td>
+                    <a href="/shop/detail/<%=Items[i].mer_id %>">
+                        <img src="<%=Items[i].image %>" alt="" style="width: 80px; border-radius: 40px;">
+                    </a>
+                </td>
+                <td>
+                    <%=Items[i].name %>
+                </td>
+                <td>
+                    <%=Items[i].price %>
+                </td>
+                <td>
+                    <%=Items[i].qty %>
+                </td>
+                <td>
+                    <%=Items[i].total %>
+                </td>
+                <td>
+                    <%=time[i] %>
+                </td>
+                <td>
+                    <a href="" style="text-decoration: auto; color: red;">구매취소</a>
+                </td>
 
-            </tr>
+            </tr>  
     <% } %>
+            <tr style="background-color: beige;">
+                <td>총금액</td>
+                <td colspan="5" style="color: #CC0066;font-weight: 700;"><%=money %></td>
+                <td>
+                    <a href="" style="text-decoration: auto; color: red;">모두 구매취소</a>
+                </td>
+            </tr>
+    </tbody>
 </table>
+
+<div style="height: 100px;"></div>
