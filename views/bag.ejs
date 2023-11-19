@@ -21,16 +21,24 @@ tbody, td, tfoot, th, thead, tr {
 }
 tr:hover {background-color: rgb(189, 169, 162);}
 
+
+td:last-child:hover {
+    background-color: aliceblue !important;
+}
 </style>
+
+<div class="table-bottom">
+    
+
+
 <table >
-    <thead> 
+    <thead class="f-thread"> 
         <td>상품</td>
         <td>상품명</td>
         <td>단가</td>
-        <td>구매량</td>
-        <td>총금액</td>
-        <td>구매일</td>
-        <td>취소여부</td>
+        <td>담은날</td>
+        <td>수량</td>
+        <td>삭제</td>
 
        
     </thead> 
@@ -52,40 +60,23 @@ tr:hover {background-color: rgb(189, 169, 162);}
                         <%=Items[i].price %>
                     </td>
                     <td>
-                        <%=Items[i].qty %>
-                    </td>
-                    <td>
-                        <%=Items[i].total %>
-                    </td>
-                    <td>
                         <%=time[i] %>
                     </td>
-
-                    <% if( Items[i].refund == 'N'){ %>
                     <td>
-                        <a href="/purchase/cancel/<%=Items[i].purchase_id %>/<%=Items[i].mer_id %>" style="text-decoration: auto; color: red;">구매취소</a>
-                        <i class="fa-solid fa-reply-all fa-xl"></i>
+                        <input type="number" value="<%=Items[i].qty %>" style="width: 120px;">
                     </td>
-                    <% } else { %>
-                        <td>
-                            <p style="color: green;">취소된 상품  <i class="fa-solid fa-circle-check fa-xl"></i></p>
-                        </td>
-                    <% } %>
+                    <td>
+                        <i class="fa-regular fa-trash-can fa-xl delete-icon"></i>
+                    </td>
 
                 </tr>  
       
 
     <% } %>
-            <tr style="background-color: beige;">
-                <td>총금액</td>
-                <td colspan="5" style="color: #CC0066;font-weight: 700;"><%=money %></td>
-                <td>
-                    <a href="" style="text-decoration: auto; color: red;">모두 구매취소</a>
-                </td>
-            </tr>
-
-           
+  
     </tbody>
 </table>
 
-<div style="height: 100px;"></div>
+</div>
+<a href="" class="btnPay">결제</a>
+

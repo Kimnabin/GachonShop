@@ -14,4 +14,13 @@ router.post("/pay", (req, res) => {
 router.get("/payed", (req, res) => {
   purchase.payed(req, res);
 });
+
+router.get("/cancel/:purchase_id/:mer_id", (req, res) => {
+  purchase.cancel(req, res);
+});
+
+router.get("/card", (req, res) => {
+  purchase.card(req, res);
+});
+
 module.exports = router;

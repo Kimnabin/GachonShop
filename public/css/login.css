@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+.delete-icon:hover {
+	color: #FF4B2B;
+}
+
+a.btnPay {
+    padding: 10px 20px;
+    background: white;
+    margin-left: 81%;
+	border: 1px solid #9dd1ff;
+	border-radius: 18px;
+	text-decoration: none;
+}
+
+a.btnPay:hover {
+	background-color: #9dd1ff;
+	color: #000;
+}
+
+.table-bottom {
+    margin-bottom: 25px;
+}
+
+
 * {
 	box-sizing: border-box;
 }
