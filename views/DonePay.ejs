@@ -1,3 +1,5 @@
+<% if(Items.length > 0){ %>
+
 <style>
 table {
     border-collapse: collapse;
@@ -89,3 +91,14 @@ tr:hover {background-color: rgb(189, 169, 162);}
 </table>
 
 <div style="height: 100px;"></div>
+
+<% } else { %>
+
+    <div style="text-align: center; margin-top: 12%;">
+        <img src="https://eztoro.com/static/svg/no_data.svg" alt="non Bag img">
+        <h1 style="margin-bottom: 20px;">현재 상품이 없습니다.</h1> 
+        
+        <a href="/shop/all" class="btn-shop">쇼핑하기</a>
+    </div>
+
+<% } %>

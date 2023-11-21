@@ -1,82 +1,101 @@
-<style>
-table {
-    border-collapse: collapse;
-    width: 70%;
-    margin-left: 15%;
-    margin-top: 20px;
-    font-size: larger;
-}
-thead {
-    font-weight: 600;
-    color: brown;
-}
-
-th, td {
-  padding: 8px;
-  text-align: center;
-  border-bottom: 1px solid #000000;
-}
-tbody, td, tfoot, th, thead, tr {
-    border-width: 1px;
-}
-tr:hover {background-color: rgb(189, 169, 162);}
+<% if(Items.length > 0){ %>
 
 
-td:last-child:hover {
-    background-color: aliceblue !important;
-}
-</style>
+        <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin-left: 15%;
+            margin-top: 20px;
+            font-size: larger;
+        }
+        thead {
+            font-weight: 600;
+            color: brown;
+        }
 
-<div class="table-bottom">
-    
+        th, td {
+        padding: 8px;
+        text-align: center;
+        border-bottom: 1px solid #000000;
+        }
+        tbody, td, tfoot, th, thead, tr {
+            border-width: 1px;
+        }
+        tr:hover {background-color: rgb(189, 169, 162);}
 
 
-<table >
-    <thead class="f-thread"> 
-        <td>상품</td>
-        <td>상품명</td>
-        <td>단가</td>
-        <td>담은날</td>
-        <td>수량</td>
-        <td>삭제</td>
+        td:last-child:hover {
+            background-color: aliceblue !important;
+        }
+        </style>
 
-       
-    </thead> 
-    <tbody>
-    <% for (var i = 0; i < Items.length; i++) { %>
+        <div class="table-bottom">
+            
 
+        <form action="/purchase/pay2" method="post">
+
+        <table >
+            <thead class="f-thread"> 
+                <td>상품</td>
+                <td>상품명</td>
+                <td>단가</td>
+                <td>담은날</td>
+                <td>수량</td>
+                <td>삭제</td>
+
+            
+            </thead> 
+            <tbody>
+
+            <% for (var i = 0; i < Items.length; i++) { %>
+
+                
+                
+                        <tr>
+                            <td>
+                                <a href="/shop/detail/<%=Items[i].mer_id %>">
+                                    <img src="<%=Items[i].image %>" alt="" style="width: 80px; border-radius: 40px;">
+                                </a>
+                            </td>
+                            <td>
+                                <%=Items[i].name %>
+                            </td>
+                            <td>
+                                <%=Items[i].price %>
+                            </td>
+                            <td>
+                                <%=time[i] %>
+                            </td>
+                            <td>
+                                <input type="number" name="qty" value="<%=Items[i].qty %>" style="width: 120px;">
+                            </td>
+                            <td>
+                                <i class="fa-regular fa-trash-can fa-xl delete-icon"></i>
+                            </td>
+
+                        </tr>  
+            
+
+            <% } %>
+                        <input type="hidden" name="itemLists" value="<%=itemLists %>">
+            </tbody>
+        </table>
+
+        </div>
+
+            <button class="btnPay" type="submit">결제</button>
+
+        </form>
+
+<% } else { %>
+
+    <div style="text-align: center; margin-top: 12%;">
+        <img src="https://eztoro.com/static/svg/no_data.svg" alt="non Bag img">
+        <h1 style="margin-bottom: 20px;">현재 상품이 없습니다.</h1> 
         
-        
-                <tr>
-                    <td>
-                        <a href="/shop/detail/<%=Items[i].mer_id %>">
-                            <img src="<%=Items[i].image %>" alt="" style="width: 80px; border-radius: 40px;">
-                        </a>
-                    </td>
-                    <td>
-                        <%=Items[i].name %>
-                    </td>
-                    <td>
-                        <%=Items[i].price %>
-                    </td>
-                    <td>
-                        <%=time[i] %>
-                    </td>
-                    <td>
-                        <input type="number" value="<%=Items[i].qty %>" style="width: 120px;">
-                    </td>
-                    <td>
-                        <i class="fa-regular fa-trash-can fa-xl delete-icon"></i>
-                    </td>
+        <a href="/shop/all" class="btn-shop">쇼핑하기</a>
+    </div>
 
-                </tr>  
-      
 
-    <% } %>
-  
-    </tbody>
-</table>
-
-</div>
-<a href="" class="btnPay">결제</a>
-
+<% } %>

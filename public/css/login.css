@@ -4,7 +4,7 @@
 	color: #FF4B2B;
 }
 
-a.btnPay {
+ button.btnPay {
     padding: 10px 20px;
     background: white;
     margin-left: 81%;
@@ -13,9 +13,27 @@ a.btnPay {
 	text-decoration: none;
 }
 
-a.btnPay:hover {
+button.btnPay:hover {
 	background-color: #9dd1ff;
 	color: #000;
+
+}
+
+a.btn-shop {
+	    background: white;
+    padding: 10px 30px;
+    border: 1px solid;
+    border-radius: 22px;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 500;
+}
+
+a.btn-shop:hover {
+	background-color: #dc3545;
+	color: white;
+	cursor: pointer;
+	border: none;
 }
 
 .table-bottom {

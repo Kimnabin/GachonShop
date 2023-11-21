@@ -23,4 +23,7 @@ router.get("/card", (req, res) => {
   purchase.card(req, res);
 });
 
+router.post("/pay2", (req, res) => {
+  purchase.purchase2(req, res);
+});
 module.exports = router;
