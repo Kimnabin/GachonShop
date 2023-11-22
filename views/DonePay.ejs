@@ -33,8 +33,6 @@ tr:hover {background-color: rgb(189, 169, 162);}
         <td>총금액</td>
         <td>구매일</td>
         <td>취소여부</td>
-
-       
     </thead> 
     <tbody>
     <% for (var i = 0; i < Items.length; i++) { %>
@@ -82,7 +80,7 @@ tr:hover {background-color: rgb(189, 169, 162);}
                 <td>총금액</td>
                 <td colspan="5" style="color: #CC0066;font-weight: 700;"><%=money %></td>
                 <td>
-                    <a href="" style="text-decoration: auto; color: red;">모두 구매취소</a>
+                    <a href="/purchase/cancel_all" style="text-decoration: auto; color: red;">모두 구매취소</a>
                 </td>
             </tr>
 

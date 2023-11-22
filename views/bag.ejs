@@ -71,7 +71,9 @@
                                 <input type="number" name="qty" value="<%=Items[i].qty %>" style="width: 120px;">
                             </td>
                             <td>
-                                <i class="fa-regular fa-trash-can fa-xl delete-icon"></i>
+                                <a href="/purchase/delete/<%=Items[i].purchase_id %>">
+                                    <i class="fa-regular fa-trash-can fa-xl delete-icon"></i>
+                                </a>
                             </td>
 
                         </tr>  

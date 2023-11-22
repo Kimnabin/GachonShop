@@ -26,4 +26,12 @@ router.get("/card", (req, res) => {
 router.post("/pay2", (req, res) => {
   purchase.purchase2(req, res);
 });
+
+router.get("/cancel_all", (req, res) => {
+  purchase.cancel_All(req, res);
+});
+
+router.get("/delete/:purchase_id", (req, res) => {
+  purchase.delete(req, res);
+});
 module.exports = router;
